@@ -57,7 +57,7 @@ infotip {
 
 .info {
   color: $primary;
-  background: lighten($primary, 35%);
+  background: lighten($primary-base, 35%);
 
   i.check-circle {
     color: $primary;

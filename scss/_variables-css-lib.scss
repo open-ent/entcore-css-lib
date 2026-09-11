@@ -28,14 +28,19 @@ $shadow-darker: rgba(0, 0, 0, 0.6) !default;
 
 // COLOR PALETTE : CSS-LIB
 $primary: blueviolet !default;
-$primary-darkest: saturate(darken($primary, 40%), 10%) !default;
-$primary-dark: saturate(darken($primary, 9%), 3%) !default;
-$primary-light: saturate(lighten($primary, 17%), 85%) !default;
+// *-base : couleur Sass réelle pour darken()/lighten()/saturate(), qui ne peuvent pas s'appliquer
+// à un $primary surchargé en CSS custom property (cf. theme-open-ent/scss/_variables-open-ent.scss).
+// Un consommateur qui ne redéfinit pas $primary en var(...) n'est pas affecté : *-base vaut alors $primary.
+$primary-base: $primary !default;
+$primary-darkest: saturate(darken($primary-base, 40%), 10%) !default;
+$primary-dark: saturate(darken($primary-base, 9%), 3%) !default;
+$primary-light: saturate(lighten($primary-base, 17%), 85%) !default;
 $primary-lighter: desaturate(lighten($primary-light, 15%), 10%) !default;
 
 $accent: aqua !default;
+$accent-base: $accent !default;
 $hover: $accent !default;
-$dark-accent: darken($accent, 20%) !default;
+$dark-accent: darken($accent-base, 20%) !default;
 
 $warning-color: $red;
 $warning-color-hover: darken($warning-color, 35%);

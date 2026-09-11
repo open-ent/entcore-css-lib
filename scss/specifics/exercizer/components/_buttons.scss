@@ -25,11 +25,11 @@
         }
 
         &:hover {
-            background: darken($primary, 10%);
+            background: darken($primary-base, 10%);
         }
 
         &:active {
-            background: darken($primary, 15%)
+            background: darken($primary-base, 15%)
         }
 
         &.disabled {
@@ -117,19 +117,19 @@
 
         &:hover {
             background-color: transparent;
-            color: darken($primary, 10%);
+            color: darken($primary-base, 10%);
 
             svg[class*="icon"] {
-                fill: darken($primary, 10%);
+                fill: darken($primary-base, 10%);
             }
         }
 
         &:active {
             background-color: transparent;
-            color: darken($primary, 15%);
+            color: darken($primary-base, 15%);
 
             svg[class*="icon"] {
-                fill: darken($primary, 15%);
+                fill: darken($primary-base, 15%);
             }
         }
 
